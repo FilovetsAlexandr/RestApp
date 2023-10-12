@@ -7,9 +7,9 @@
 
 import UIKit
 
-class UsersTVC: UITableViewController {
+final class UsersTVC: UITableViewController {
     
-    var users: [User] = []
+    private var users: [User] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,16 +18,29 @@ class UsersTVC: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        users.count
-    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { users.count }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! UsersTableViewCell
+        
         let user = users[indexPath.row]
-        cell.textLabel?.text = user.name?.description
-        cell.detailTextLabel?.text = user.username
+        
+        cell.nameLbl.text = user.name
+        cell.emailLbl.text = user.email 
+        
         return cell
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailUsersVC" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let detailsVC = segue.destination as! DetailUsersVC
+                detailsVC.detailUser = users[indexPath.row]
+                // изменяем имя навигейшн бара
+                detailsVC.navigationItem.title = users[indexPath.row].name
+            }
+        }
     }
 
     /*

@@ -18,10 +18,12 @@
 		71B7946E2AD5CEE100FD53AC /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B7946D2AD5CEE100FD53AC /* UsersTVC.swift */; };
 		71B794712AD5CF1900FD53AC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B794702AD5CF1900FD53AC /* UserModel.swift */; };
 		71B794742AD5D1B300FD53AC /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B794732AD5D1B300FD53AC /* ApiConstants.swift */; };
+		F4D59CAA2AD6F0F00050F9A5 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D59CA92AD6F0F00050F9A5 /* UsersTableViewCell.swift */; };
+		F4D59CAC2AD7CF2E0050F9A5 /* DetailUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D59CAB2AD7CF2E0050F9A5 /* DetailUsersVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7189B4432ACF21820083CB25 /* RestAppCW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestAppCW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7189B4432ACF21820083CB25 /* RestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7189B4462ACF21820083CB25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7189B4482ACF21820083CB25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7189B44D2ACF21820083CB25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		71B7946D2AD5CEE100FD53AC /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
 		71B794702AD5CF1900FD53AC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		71B794732AD5D1B300FD53AC /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		F4D59CA92AD6F0F00050F9A5 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		F4D59CAB2AD7CF2E0050F9A5 /* DetailUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUsersVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,7 @@
 		7189B4442ACF21820083CB25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7189B4432ACF21820083CB25 /* RestAppCW.app */,
+				7189B4432ACF21820083CB25 /* RestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +70,7 @@
 		7189B4452ACF21820083CB25 /* RestApp */ = {
 			isa = PBXGroup;
 			children = (
+				F4D59CA82AD6E8310050F9A5 /* Services */,
 				71B7946F2AD5CF0800FD53AC /* Models */,
 				7189B45C2ACF257F0083CB25 /* Controllers */,
 				7189B45B2ACF234B0083CB25 /* Views */,
@@ -125,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				71B7946D2AD5CEE100FD53AC /* UsersTVC.swift */,
+				F4D59CA92AD6F0F00050F9A5 /* UsersTableViewCell.swift */,
+				F4D59CAB2AD7CF2E0050F9A5 /* DetailUsersVC.swift */,
 			);
 			path = UsersList;
 			sourceTree = "<group>";
@@ -138,12 +145,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F4D59CA82AD6E8310050F9A5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7189B4422ACF21820083CB25 /* RestAppCW */ = {
+		7189B4422ACF21820083CB25 /* RestApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7189B4572ACF21830083CB25 /* Build configuration list for PBXNativeTarget "RestAppCW" */;
+			buildConfigurationList = 7189B4572ACF21830083CB25 /* Build configuration list for PBXNativeTarget "RestApp" */;
 			buildPhases = (
 				7189B43F2ACF21820083CB25 /* Sources */,
 				7189B4402ACF21820083CB25 /* Frameworks */,
@@ -153,9 +167,9 @@
 			);
 			dependencies = (
 			);
-			name = RestAppCW;
+			name = RestApp;
 			productName = RestAppCW;
-			productReference = 7189B4432ACF21820083CB25 /* RestAppCW.app */;
+			productReference = 7189B4432ACF21820083CB25 /* RestApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +200,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7189B4422ACF21820083CB25 /* RestAppCW */,
+				7189B4422ACF21820083CB25 /* RestApp */,
 			);
 		};
 /* End PBXProject section */
@@ -216,6 +230,8 @@
 				71B794742AD5D1B300FD53AC /* ApiConstants.swift in Sources */,
 				7189B45E2ACF25A60083CB25 /* CollectionVC.swift in Sources */,
 				7189B4492ACF21820083CB25 /* SceneDelegate.swift in Sources */,
+				F4D59CAA2AD6F0F00050F9A5 /* UsersTableViewCell.swift in Sources */,
+				F4D59CAC2AD7CF2E0050F9A5 /* DetailUsersVC.swift in Sources */,
 				71B794712AD5CF1900FD53AC /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +386,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 94FVSLY3WZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RestAppCW/Info.plist;
+				INFOPLIST_FILE = RestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -398,7 +414,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 94FVSLY3WZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RestAppCW/Info.plist;
+				INFOPLIST_FILE = RestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -429,7 +445,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7189B4572ACF21830083CB25 /* Build configuration list for PBXNativeTarget "RestAppCW" */ = {
+		7189B4572ACF21830083CB25 /* Build configuration list for PBXNativeTarget "RestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7189B4582ACF21830083CB25 /* Debug */,
