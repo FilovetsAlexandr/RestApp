@@ -138,7 +138,15 @@
                             <outlet property="delegate" destination="95f-4g-HBC" id="PtM-hP-wli"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="LUk-so-7S3"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="LUk-so-7S3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4CM-49-ct6">
+                            <connections>
+                                <action selector="pushAddAction:" destination="95f-4g-HBC" id="DhF-Zj-UmM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eug-FU-Nt0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRU-Hf-1is">
-                                <rect key="frame" x="0.0" y="103" width="430" height="795"/>
+                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1z-OK-Wqp">
                                         <rect key="frame" x="0.0" y="0.0" width="430" height="859.33333333333337"/>
