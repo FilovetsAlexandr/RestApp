@@ -21,6 +21,19 @@
 		F4B8A8042ADDABA200C34F95 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4B8A8032ADDABA200C34F95 /* Alamofire */; };
 		F4B8A8072ADDABDD00C34F95 /* TextPickerCreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A8062ADDABDD00C34F95 /* TextPickerCreateUser.swift */; };
 		F4B8A8092ADDABF200C34F95 /* TextPickerEditUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A8082ADDABF200C34F95 /* TextPickerEditUser.swift */; };
+		F4B8A80B2ADDBC5200C34F95 /* PostFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A80A2ADDBC5200C34F95 /* PostFlow.storyboard */; };
+		F4B8A80D2ADDBC8400C34F95 /* AlbumsAndPhotosFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A80C2ADDBC8400C34F95 /* AlbumsAndPhotosFlow.storyboard */; };
+		F4B8A8102ADE69B300C34F95 /* ToDoFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A80F2ADE69B300C34F95 /* ToDoFlow.storyboard */; };
+		F4B8A8132ADE6C7800C34F95 /* PostsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A8122ADE6C7800C34F95 /* PostsTVC.swift */; };
+		F4B8A8172ADE6D7300C34F95 /* AlbumsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A8162ADE6D7300C34F95 /* AlbumsTVC.swift */; };
+		F4B8A8192ADE6E7500C34F95 /* ToDosTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A8182ADE6E7500C34F95 /* ToDosTVC.swift */; };
+		F4B8A81B2ADE6FAC00C34F95 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A81A2ADE6FAC00C34F95 /* PostModel.swift */; };
+		F4B8A81D2ADE6FE000C34F95 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A81C2ADE6FE000C34F95 /* AlbumModel.swift */; };
+		F4B8A81F2ADE701500C34F95 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A81E2ADE701500C34F95 /* ToDoModel.swift */; };
+		F4B8A8212ADE70C500C34F95 /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A8202ADE70C500C34F95 /* NewPostVC.swift */; };
+		F4B8A8242ADE715900C34F95 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = F4B8A8232ADE715900C34F95 /* SwiftyJSON */; };
+		F4B8A8272ADE71A100C34F95 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = F4B8A8262ADE71A100C34F95 /* AlamofireImage */; };
+		F4B8A82A2ADE726D00C34F95 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A8292ADE726D00C34F95 /* NetworkService.swift */; };
 		F4D59CAA2AD6F0F00050F9A5 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D59CA92AD6F0F00050F9A5 /* UsersTableViewCell.swift */; };
 		F4D59CAC2AD7CF2E0050F9A5 /* DetailUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D59CAB2AD7CF2E0050F9A5 /* DetailUsersVC.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +54,17 @@
 		71B794732AD5D1B300FD53AC /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		F4B8A8062ADDABDD00C34F95 /* TextPickerCreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPickerCreateUser.swift; sourceTree = "<group>"; };
 		F4B8A8082ADDABF200C34F95 /* TextPickerEditUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPickerEditUser.swift; sourceTree = "<group>"; };
+		F4B8A80A2ADDBC5200C34F95 /* PostFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostFlow.storyboard; sourceTree = "<group>"; };
+		F4B8A80C2ADDBC8400C34F95 /* AlbumsAndPhotosFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumsAndPhotosFlow.storyboard; sourceTree = "<group>"; };
+		F4B8A80F2ADE69B300C34F95 /* ToDoFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ToDoFlow.storyboard; sourceTree = "<group>"; };
+		F4B8A8122ADE6C7800C34F95 /* PostsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTVC.swift; sourceTree = "<group>"; };
+		F4B8A8162ADE6D7300C34F95 /* AlbumsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTVC.swift; sourceTree = "<group>"; };
+		F4B8A8182ADE6E7500C34F95 /* ToDosTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDosTVC.swift; sourceTree = "<group>"; };
+		F4B8A81A2ADE6FAC00C34F95 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		F4B8A81C2ADE6FE000C34F95 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		F4B8A81E2ADE701500C34F95 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		F4B8A8202ADE70C500C34F95 /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
+		F4B8A8292ADE726D00C34F95 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F4D59CA92AD6F0F00050F9A5 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		F4D59CAB2AD7CF2E0050F9A5 /* DetailUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUsersVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,7 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B8A8242ADE715900C34F95 /* SwiftyJSON in Frameworks */,
 				F4B8A8042ADDABA200C34F95 /* Alamofire in Frameworks */,
+				F4B8A8272ADE71A100C34F95 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,10 +102,11 @@
 		7189B4452ACF21820083CB25 /* RestApp */ = {
 			isa = PBXGroup;
 			children = (
+				F4B8A8282ADE724F00C34F95 /* Services */,
 				71B7946F2AD5CF0800FD53AC /* Models */,
 				7189B45C2ACF257F0083CB25 /* Controllers */,
 				7189B45B2ACF234B0083CB25 /* Views */,
-				7189B44F2ACF21830083CB25 /* Assets.xcassets */,
+				F4B8A80E2ADDBC8D00C34F95 /* Resources */,
 				7189B45A2ACF21930083CB25 /* App */,
 				7189B4542ACF21830083CB25 /* Info.plist */,
 			);
@@ -100,6 +127,9 @@
 			children = (
 				7189B44C2ACF21820083CB25 /* Main.storyboard */,
 				7189B4512ACF21830083CB25 /* LaunchScreen.storyboard */,
+				F4B8A80A2ADDBC5200C34F95 /* PostFlow.storyboard */,
+				F4B8A80C2ADDBC8400C34F95 /* AlbumsAndPhotosFlow.storyboard */,
+				F4B8A80F2ADE69B300C34F95 /* ToDoFlow.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +140,9 @@
 				7189B4612ACF2F710083CB25 /* ActionsCollection */,
 				7189B4622ACF2FB40083CB25 /* ImageView */,
 				71B7946C2AD5CEB500FD53AC /* UsersList */,
+				F4B8A8112ADE6C3000C34F95 /* Posts */,
+				F4B8A8142ADE6CDB00C34F95 /* Albums */,
+				F4B8A8152ADE6D2400C34F95 /* ToDo */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -146,6 +179,9 @@
 			children = (
 				71B794702AD5CF1900FD53AC /* UserModel.swift */,
 				71B794732AD5D1B300FD53AC /* ApiConstants.swift */,
+				F4B8A81A2ADE6FAC00C34F95 /* PostModel.swift */,
+				F4B8A81C2ADE6FE000C34F95 /* AlbumModel.swift */,
+				F4B8A81E2ADE701500C34F95 /* ToDoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,6 +194,47 @@
 				F4B8A8082ADDABF200C34F95 /* TextPickerEditUser.swift */,
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		F4B8A80E2ADDBC8D00C34F95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7189B44F2ACF21830083CB25 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F4B8A8112ADE6C3000C34F95 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				F4B8A8122ADE6C7800C34F95 /* PostsTVC.swift */,
+				F4B8A8202ADE70C500C34F95 /* NewPostVC.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		F4B8A8142ADE6CDB00C34F95 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				F4B8A8162ADE6D7300C34F95 /* AlbumsTVC.swift */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		F4B8A8152ADE6D2400C34F95 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				F4B8A8182ADE6E7500C34F95 /* ToDosTVC.swift */,
+			);
+			path = ToDo;
+			sourceTree = "<group>";
+		};
+		F4B8A8282ADE724F00C34F95 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F4B8A8292ADE726D00C34F95 /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +255,8 @@
 			name = RestApp;
 			packageProductDependencies = (
 				F4B8A8032ADDABA200C34F95 /* Alamofire */,
+				F4B8A8232ADE715900C34F95 /* SwiftyJSON */,
+				F4B8A8262ADE71A100C34F95 /* AlamofireImage */,
 			);
 			productName = RestAppCW;
 			productReference = 7189B4432ACF21820083CB25 /* RestApp.app */;
@@ -209,6 +288,8 @@
 			mainGroup = 7189B43A2ACF21820083CB25;
 			packageReferences = (
 				F4B8A8022ADDABA200C34F95 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F4B8A8222ADE715900C34F95 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				F4B8A8252ADE71A100C34F95 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 7189B4442ACF21820083CB25 /* Products */;
 			projectDirPath = "";
@@ -224,7 +305,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B8A8102ADE69B300C34F95 /* ToDoFlow.storyboard in Resources */,
+				F4B8A80B2ADDBC5200C34F95 /* PostFlow.storyboard in Resources */,
 				7189B4532ACF21830083CB25 /* LaunchScreen.storyboard in Resources */,
+				F4B8A80D2ADDBC8400C34F95 /* AlbumsAndPhotosFlow.storyboard in Resources */,
 				7189B4502ACF21830083CB25 /* Assets.xcassets in Resources */,
 				7189B44E2ACF21820083CB25 /* Main.storyboard in Resources */,
 			);
@@ -238,17 +322,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				7189B4602ACF27730083CB25 /* ActionCVCell.swift in Sources */,
+				F4B8A81B2ADE6FAC00C34F95 /* PostModel.swift in Sources */,
+				F4B8A8132ADE6C7800C34F95 /* PostsTVC.swift in Sources */,
 				7189B4472ACF21820083CB25 /* AppDelegate.swift in Sources */,
 				F4B8A8072ADDABDD00C34F95 /* TextPickerCreateUser.swift in Sources */,
 				71B7946E2AD5CEE100FD53AC /* UsersTVC.swift in Sources */,
 				7189B4642ACF2FD30083CB25 /* ImageVC.swift in Sources */,
 				71B794742AD5D1B300FD53AC /* ApiConstants.swift in Sources */,
 				7189B45E2ACF25A60083CB25 /* CollectionVC.swift in Sources */,
+				F4B8A8192ADE6E7500C34F95 /* ToDosTVC.swift in Sources */,
+				F4B8A82A2ADE726D00C34F95 /* NetworkService.swift in Sources */,
 				7189B4492ACF21820083CB25 /* SceneDelegate.swift in Sources */,
 				F4D59CAA2AD6F0F00050F9A5 /* UsersTableViewCell.swift in Sources */,
+				F4B8A81D2ADE6FE000C34F95 /* AlbumModel.swift in Sources */,
 				F4D59CAC2AD7CF2E0050F9A5 /* DetailUsersVC.swift in Sources */,
+				F4B8A8212ADE70C500C34F95 /* NewPostVC.swift in Sources */,
 				71B794712AD5CF1900FD53AC /* UserModel.swift in Sources */,
 				F4B8A8092ADDABF200C34F95 /* TextPickerEditUser.swift in Sources */,
+				F4B8A8172ADE6D7300C34F95 /* AlbumsTVC.swift in Sources */,
+				F4B8A81F2ADE701500C34F95 /* ToDoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +573,22 @@
 				minimumVersion = 5.8.0;
 			};
 		};
+		F4B8A8222ADE715900C34F95 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		F4B8A8252ADE71A100C34F95 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -488,6 +596,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F4B8A8022ADDABA200C34F95 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		F4B8A8232ADE715900C34F95 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4B8A8222ADE715900C34F95 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		F4B8A8262ADE71A100C34F95 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4B8A8252ADE71A100C34F95 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

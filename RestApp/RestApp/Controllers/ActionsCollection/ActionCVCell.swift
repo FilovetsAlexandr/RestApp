@@ -7,6 +7,6 @@
 
 import UIKit
 
-class ActionCVCell: UICollectionViewCell {
+final class ActionCVCell: UICollectionViewCell {
     @IBOutlet weak var infiLbl: UILabel!
 }

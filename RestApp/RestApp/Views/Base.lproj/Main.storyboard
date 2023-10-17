@@ -309,16 +309,25 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="380" height="34.333333333333336"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="Posts"/>
+                                                                <connections>
+                                                                    <action selector="openPostFlow" destination="B6J-Nl-z1g" eventType="touchUpInside" id="VFa-1L-wXc"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N38-FM-kFo">
                                                                 <rect key="frame" x="0.0" y="92.333333333333258" width="380" height="34.333333333333343"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="filled" title="Alboms"/>
+                                                                <buttonConfiguration key="configuration" style="filled" title="Albums"/>
+                                                                <connections>
+                                                                    <action selector="openAlbumsFlow:" destination="B6J-Nl-z1g" eventType="touchUpInside" id="dwf-ry-0dH"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nls-Xk-QPH">
                                                                 <rect key="frame" x="0.0" y="184.66666666666663" width="380" height="34.333333333333343"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="filled" title="ToDo-s"/>
+                                                                <connections>
+                                                                    <action selector="openToDosFlow" destination="B6J-Nl-z1g" eventType="touchUpInside" id="G23-Lb-NdG"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>

@@ -90,7 +90,7 @@ final class UsersTVC: UITableViewController {
         if segue.identifier == "DetailUsersVC" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let detailsVC = segue.destination as! DetailUsersVC
-                detailsVC.detailUser = users[indexPath.row]
+                detailsVC.user = users[indexPath.row]
                 detailsVC.navigationItem.title = users[indexPath.row].name
             }
         }
