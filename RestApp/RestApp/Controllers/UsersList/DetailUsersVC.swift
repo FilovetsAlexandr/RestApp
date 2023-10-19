@@ -17,17 +17,41 @@ final class DetailUsersVC: UIViewController {
     @IBOutlet private weak var websiteLbl: UILabel!
     @IBOutlet private weak var adressLbl: UILabel!
     
-    var detailUser: User?
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setDetail(user: detailUser)
+        setDetail(user: user)
     }
     
     @IBAction func openMapsButtonTapped(_ sender: UIButton) { openMapsForUserLocation() }
     
+    
+    @IBAction func openPostFlow() {
+        let storyboard = UIStoryboard(name: "PostFlow", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PostsTVC") as! PostsTVC
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func openAlbumsFlow(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "AlbumsAndPhotosFlow", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AlbumsTVC") as! AlbumsTVC
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func openToDosFlow() {
+        let storyboard = UIStoryboard(name: "ToDoFlow", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ToDosTVC") as! ToDosTVC
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    
     private func openMapsForUserLocation() {
-        if let user = detailUser,
+        if let user = user,
            let latitudeString = user.address?.geo?.lat,
            let longitudeString = user.address?.geo?.lng,
            let latitude = Double(latitudeString),
