@@ -129,7 +129,7 @@ final class UsersTVC: UITableViewController {
 
     // Редактирование пользователя
     private func uploadUser(user: User, callback: @escaping () -> ()) {
-        guard let uploadURL = ApiConstants.usersURL else { return }
+        guard ApiConstants.usersURL != nil else { return }
         
         let userURL = "\(ApiConstants.usersPath)/\(user.id)"
         

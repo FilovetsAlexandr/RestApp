@@ -38,12 +38,20 @@ final class PostsTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let postId = posts[indexPath.row].id
-            NetworkService.deletePost(postId: postId) { [weak self] in
-                self?.posts.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
+            NetworkService.deletePost(postID: postId) { [weak self] result, error in
+                if let error = error {
+                    // Handle the error
+                    print("Error: \(error)")
+                } else if let _ = result {
+                    // Handle the successful deletion
+                    self?.posts.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
             }
         }
     }
+
+
 
     // MARK: - Navigation
 

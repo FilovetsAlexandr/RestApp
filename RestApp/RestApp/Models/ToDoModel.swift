@@ -13,4 +13,3 @@ struct ToDo: Codable {
     let title: String?
     let body: String?
 }
-

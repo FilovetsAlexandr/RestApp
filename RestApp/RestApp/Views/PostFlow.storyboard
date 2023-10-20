@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="1521.3740458015266" y="-32.394366197183103"/>
         </scene>
-        <!--Table View Controller-->
+        <!--CommentsTVC-->
         <scene sceneID="xY3-qb-ViD">
             <objects>
-                <tableViewController id="x2B-kE-rlS" sceneMemberID="viewController">
+                <tableViewController id="x2B-kE-rlS" customClass="CommentsTVC" customModule="RestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IgD-L9-5ft">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
