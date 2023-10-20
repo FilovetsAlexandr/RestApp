@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommentsTVC: UITableViewController {
+final class CommentsTVC: UITableViewController {
     var postID: Int?
     var comments: [Comment] = []
 
@@ -18,9 +18,7 @@ class CommentsTVC: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        comments.count
-    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { comments.count }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)

@@ -11,7 +11,7 @@ import Foundation
 import SwiftyJSON
 import UIKit
 
-class NetworkService {
+final class NetworkService {
     static func deletePost(postID: Int, callback: @escaping (_ result: JSON?, _ error: Error?) -> ()) {
         let urlPath = "\(ApiConstants.postsPath)/\(postID)"
         

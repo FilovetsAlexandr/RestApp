@@ -7,14 +7,14 @@
 
 import UIKit
 
-class AlbumsTVC: UITableViewController {
+final class AlbumsTVC: UITableViewController {
     
     var user: User?
     var albums: [Album]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchAlbums()
+        fetchAlboms()
     }
 
     // MARK: - Table view data source
@@ -43,7 +43,7 @@ class AlbumsTVC: UITableViewController {
         }
     }
     
-    private func fetchAlbums() {
+    private func fetchAlboms() {
         guard let user = user else { return  }
         NetworkService.fetchAlbums(userID: user.id) { [weak self] albums, error in
             if let error = error {

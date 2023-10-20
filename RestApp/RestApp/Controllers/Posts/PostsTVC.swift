@@ -39,25 +39,24 @@ final class PostsTVC: UITableViewController {
         if editingStyle == .delete {
             let postId = posts[indexPath.row].id
             NetworkService.deletePost(postID: postId) { [weak self] result, error in
-                if let error = error {
-                    // Handle the error
-                    print("Error: \(error)")
-                } else if let _ = result {
-                    // Handle the successful deletion
-                    self?.posts.remove(at: indexPath.row)
-                    tableView.deleteRows(at: [indexPath], with: .fade)
-                }
+                self?.posts.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
     }
 
-
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "openComments", sender: nil)
+    }
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? NewPostVC {
             vc.user = user
+        } else if let vc = segue.destination as? CommentsTVC,
+                  let indexPath = tableView.indexPathForSelectedRow {
+            let postID = posts[indexPath.row].id
+            vc.postID = postID
         }
     }
 
