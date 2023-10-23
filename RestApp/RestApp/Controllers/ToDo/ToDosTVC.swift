@@ -18,7 +18,7 @@ final class ToDosTVC: UITableViewController {
     
     // Добавление новой todo
     @IBAction func pushAddAction(_ sender: Any) {
-        ToDosTextPicker().showPicker(in: self) { [weak self] text in
+        ToDosTextPicker().showPicker(in: self, text: "") { [weak self] text in
             let newId = (self?.toDos?.last?.id ?? 0) + 1
             let newToDo = ToDo(userId: self?.user?.id ?? 0, id: newId, title: text, completed: false)
             self?.toDos?.append(newToDo)
@@ -39,10 +39,77 @@ final class ToDosTVC: UITableViewController {
                     print("Ошибка при отправке данных на сервер: \(error)")
                 } else {
                     print("Данные успешно обновлены на сервере")
+                    self?.fetchToDo()
                 }
             }
         }
     }
+        
+    // Удаление todo
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard indexPath.row < toDos?.count ?? 0 else { return }
+            
+            // Отправляем запрос на сервер для удаления задачи
+            guard let toDo = toDos?[indexPath.row] else { return }
+            let url = URL(string: "http://localhost:3000/todos/\(toDo.id)")!
+            
+            AF.request(url, method: .delete).response { response in
+                if let error = response.error {
+                    print("Ошибка при удалении задачи: \(error)")
+                } else {
+                    print("Задача успешно удалена")
+                    
+                    // Обновляем данные в таблице
+                    self.toDos?.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+            }
+        }
+    }
+    // Редактирование
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { [weak self] _, _, completionHandler in
+            guard let toDo = self?.toDos?[indexPath.row] else {
+                completionHandler(false)
+                return
+            }
+            
+            let picker = ToDosTextPicker()
+            picker.showPicker(in: self!, text: toDo.title ?? "") { [weak self] text in
+                let updatedToDo = ToDo(userId: toDo.userId, id: toDo.id, title: text, completed: toDo.completed)
+                self?.toDos?[indexPath.row] = updatedToDo
+                tableView.reloadRows(at: [indexPath], with: .none)
+                
+                // Отправляем обновленные данные на сервер с помощью Alamofire
+                let parameters: [String: Any] = [
+                    "title": updatedToDo.title as Any
+                ]
+                
+                guard let url = URL(string: "http://localhost:3000/todos/\(updatedToDo.id)") else {
+                    completionHandler(false)
+                    return
+                }
+                
+                AF.request(url, method: .patch, parameters: parameters, encoding: JSONEncoding.default).response { response in
+                    // Обработка ответа от сервера
+                    if let error = response.error {
+                        print("Ошибка при отправке данных на сервер: \(error)")
+                    } else {
+                        print("Данные успешно обновлены на сервере")
+                        tableView.reloadRows(at: [indexPath], with: .none)
+                    }
+                }
+                
+                completionHandler(true)
+            }
+        }
+        let configuration = UISwipeActionsConfiguration(actions: [editAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        
+        return configuration
+    }
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { toDos?.count ?? 0 }
     
@@ -66,6 +133,7 @@ final class ToDosTVC: UITableViewController {
                 print("Ошибка при отправке данных на сервер: \(error)")
             } else {
                 print("Данные успешно обновлены на сервере")
+                tableView.reloadRows(at: [indexPath], with: .none)
             }
         }
     }
@@ -86,7 +154,7 @@ final class ToDosTVC: UITableViewController {
     }
 
        
-       private func fetchToDo() {
+   private func fetchToDo() {
            let userId = user?.id.description ?? ""
            let urlPath = "\(ApiConstants.todosPath)?userId=\(userId)"
            guard let url = URL(string: urlPath) else { return }
