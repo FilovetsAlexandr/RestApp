@@ -5,6 +5,7 @@
 //  Created by Alexandr Filovets on 17.10.23.
 //
 import Alamofire
+import Lottie
 import UIKit
 
 final class ToDosTVC: UITableViewController {
@@ -139,19 +140,38 @@ final class ToDosTVC: UITableViewController {
     }
 
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
-        let toDo = toDos?[indexPath.row]
-        cell.textLabel?.text = toDo?.title
-        
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = toDo?.completed ?? false ? UIImage(named: "check.png") : UIImage(named: "uncheck.png")
-               
-        cell.accessoryView = imageView
-        
-        return cell
+        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+            let toDo = toDos?[indexPath.row]
+            cell.textLabel?.text = toDo?.title
+            cell.textLabel?.numberOfLines = 0
+
+            
+            let animationView = LottieAnimationView()
+            animationView.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
+            animationView.contentMode = .scaleAspectFit
+            
+            if let completed = toDo?.completed {
+                if completed {
+                    if let animation = LottieAnimation.named("check") {
+                        animationView.animation = animation
+                        animationView.loopMode = .playOnce
+                        // Анимация завершена
+                        animationView.play(completion: { _ in })
+                    }
+                } else {
+                    if let animation = LottieAnimation.named("checkout") {
+                        animationView.animation = animation
+                        animationView.loopMode = .playOnce
+                        // Анимация завершена
+                        animationView.play(completion: { _ in })
+                    }
+                }
+            }
+            cell.accessoryView = animationView
+            return cell
     }
+
 
        
    private func fetchToDo() {

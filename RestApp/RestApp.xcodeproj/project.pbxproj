@@ -18,6 +18,9 @@
 		71B7946E2AD5CEE100FD53AC /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B7946D2AD5CEE100FD53AC /* UsersTVC.swift */; };
 		71B794712AD5CF1900FD53AC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B794702AD5CF1900FD53AC /* UserModel.swift */; };
 		71B794742AD5D1B300FD53AC /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B794732AD5D1B300FD53AC /* ApiConstants.swift */; };
+		F470E6672AE69A5C009BF082 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F470E6662AE69A5C009BF082 /* Lottie */; };
+		F470E66F2AE6A0C8009BF082 /* checkout.json in Resources */ = {isa = PBXBuildFile; fileRef = F470E66E2AE69BE6009BF082 /* checkout.json */; };
+		F470E6702AE6A0CA009BF082 /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = F470E66D2AE69BE6009BF082 /* check.json */; };
 		F4B8A8042ADDABA200C34F95 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4B8A8032ADDABA200C34F95 /* Alamofire */; };
 		F4B8A8072ADDABDD00C34F95 /* TextPickerCreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A8062ADDABDD00C34F95 /* TextPickerCreateUser.swift */; };
 		F4B8A8092ADDABF200C34F95 /* TextPickerEditUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A8082ADDABF200C34F95 /* TextPickerEditUser.swift */; };
@@ -61,6 +64,8 @@
 		71B7946D2AD5CEE100FD53AC /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
 		71B794702AD5CF1900FD53AC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		71B794732AD5D1B300FD53AC /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		F470E66D2AE69BE6009BF082 /* check.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
+		F470E66E2AE69BE6009BF082 /* checkout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = checkout.json; sourceTree = "<group>"; };
 		F4B8A8062ADDABDD00C34F95 /* TextPickerCreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPickerCreateUser.swift; sourceTree = "<group>"; };
 		F4B8A8082ADDABF200C34F95 /* TextPickerEditUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPickerEditUser.swift; sourceTree = "<group>"; };
 		F4B8A80A2ADDBC5200C34F95 /* PostFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostFlow.storyboard; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 				F4B8A8242ADE715900C34F95 /* SwiftyJSON in Frameworks */,
 				F4B8A8042ADDABA200C34F95 /* Alamofire in Frameworks */,
 				F4B8A8272ADE71A100C34F95 /* AlamofireImage in Frameworks */,
+				F470E6672AE69A5C009BF082 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +215,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F470E6682AE69BC7009BF082 /* LottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F470E66D2AE69BE6009BF082 /* check.json */,
+				F470E66E2AE69BE6009BF082 /* checkout.json */,
+			);
+			path = LottieAnimation;
+			sourceTree = "<group>";
+		};
 		F4B8A8052ADDABCB00C34F95 /* Users */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +237,7 @@
 		F4B8A80E2ADDBC8D00C34F95 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F470E6682AE69BC7009BF082 /* LottieAnimation */,
 				7189B44F2ACF21830083CB25 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -316,6 +332,7 @@
 				F4B8A8032ADDABA200C34F95 /* Alamofire */,
 				F4B8A8232ADE715900C34F95 /* SwiftyJSON */,
 				F4B8A8262ADE71A100C34F95 /* AlamofireImage */,
+				F470E6662AE69A5C009BF082 /* Lottie */,
 			);
 			productName = RestAppCW;
 			productReference = 7189B4432ACF21820083CB25 /* RestApp.app */;
@@ -349,6 +366,7 @@
 				F4B8A8022ADDABA200C34F95 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				F4B8A8222ADE715900C34F95 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				F4B8A8252ADE71A100C34F95 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				F470E6652AE69A5C009BF082 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 7189B4442ACF21820083CB25 /* Products */;
 			projectDirPath = "";
@@ -364,9 +382,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F470E6702AE6A0CA009BF082 /* check.json in Resources */,
 				F4B8A8102ADE69B300C34F95 /* ToDoFlow.storyboard in Resources */,
 				F4B8A80B2ADDBC5200C34F95 /* PostFlow.storyboard in Resources */,
 				7189B4532ACF21830083CB25 /* LaunchScreen.storyboard in Resources */,
+				F470E66F2AE6A0C8009BF082 /* checkout.json in Resources */,
 				F4B8A80D2ADDBC8400C34F95 /* AlbumsAndPhotosFlow.storyboard in Resources */,
 				7189B4502ACF21830083CB25 /* Assets.xcassets in Resources */,
 				7189B44E2ACF21820083CB25 /* Main.storyboard in Resources */,
@@ -633,6 +653,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F470E6652AE69A5C009BF082 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
 		F4B8A8022ADDABA200C34F95 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -660,6 +688,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F470E6662AE69A5C009BF082 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F470E6652AE69A5C009BF082 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		F4B8A8032ADDABA200C34F95 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4B8A8022ADDABA200C34F95 /* XCRemoteSwiftPackageReference "Alamofire" */;
