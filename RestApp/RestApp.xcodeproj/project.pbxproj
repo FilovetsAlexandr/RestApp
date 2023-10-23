@@ -42,6 +42,7 @@
 		F4B8A83A2AE287CF00C34F95 /* PhotoCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A8382AE287CF00C34F95 /* PhotoCVCell.xib */; };
 		F4B8A83C2AE2893800C34F95 /* PhotosCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A83B2AE2893800C34F95 /* PhotosCVC.swift */; };
 		F4B8A83E2AE28AD300C34F95 /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A83D2AE28AD300C34F95 /* PhotoVC.swift */; };
+		F4B8A8402AE578F700C34F95 /* ToDosTextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A83F2AE578F700C34F95 /* ToDosTextPicker.swift */; };
 		F4D59CAA2AD6F0F00050F9A5 /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D59CA92AD6F0F00050F9A5 /* UsersTableViewCell.swift */; };
 		F4D59CAC2AD7CF2E0050F9A5 /* DetailUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D59CAB2AD7CF2E0050F9A5 /* DetailUsersVC.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		F4B8A8382AE287CF00C34F95 /* PhotoCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCVCell.xib; sourceTree = "<group>"; };
 		F4B8A83B2AE2893800C34F95 /* PhotosCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCVC.swift; sourceTree = "<group>"; };
 		F4B8A83D2AE28AD300C34F95 /* PhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
+		F4B8A83F2AE578F700C34F95 /* ToDosTextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDosTextPicker.swift; sourceTree = "<group>"; };
 		F4D59CA92AD6F0F00050F9A5 /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
 		F4D59CAB2AD7CF2E0050F9A5 /* DetailUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUsersVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				F4B8A8182ADE6E7500C34F95 /* ToDosTVC.swift */,
+				F4B8A83F2AE578F700C34F95 /* ToDosTextPicker.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				71B7946E2AD5CEE100FD53AC /* UsersTVC.swift in Sources */,
 				7189B4642ACF2FD30083CB25 /* ImageVC.swift in Sources */,
 				F4B8A8332AE27F4600C34F95 /* CommentsTVC.swift in Sources */,
+				F4B8A8402AE578F700C34F95 /* ToDosTextPicker.swift in Sources */,
 				F4B8A8302AE1BF7500C34F95 /* PhotoModel.swift in Sources */,
 				F4B8A82E2AE1BF0600C34F95 /* CommentModel.swift in Sources */,
 				71B794742AD5D1B300FD53AC /* ApiConstants.swift in Sources */,
