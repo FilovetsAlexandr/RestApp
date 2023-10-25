@@ -34,9 +34,9 @@ final class ImageVC: UIViewController {
         
         let task = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error in
             
-            print(data)
-            print(response)
-            print(error)
+//            print(data)
+//            print(response)
+//            print(error)
             
             /*
              работа с UI всегда идет в главном потоке (main thread)

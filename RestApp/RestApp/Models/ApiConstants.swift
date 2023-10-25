@@ -8,7 +8,6 @@
 import Foundation
 
 struct ApiConstants {
-    
     /// Local server path
     static let serverPath = "http://localhost:3000/"
     /// Users
@@ -17,12 +16,15 @@ struct ApiConstants {
     /// Posts
     static let postsPath = serverPath + "posts"
     static let postsURL = URL(string: postsPath)
+    /// Comments
+    static let commentsPath = serverPath + "comments"
+    static let commentsURL = URL(string: commentsPath)
     /// ToDo-s
     static let todosPath = serverPath + "todos"
     static let todosURL = URL(string: todosPath)
     /// Alboms
-    static let albomsPath = serverPath + "alboms"
-    static let albomsURL = URL(string: albomsPath)
+    static let albumsPath = serverPath + "albums"
+    static let albumsURL = URL(string: albumsPath)
     /// Photos
     static let photosPath = serverPath + "photos"
     static let photosURL = URL(string: photosPath)
